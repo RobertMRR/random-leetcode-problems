@@ -1,1 +1,1 @@
-ECHO is on.
+This repo contains my solutions to random leetcode problems
