@@ -5,8 +5,7 @@ def isValid(s):
         if char in openings:
             validator.append(char)
         else:
-            print(f"validator is: {validator}")
-            if validator == []:
+            if not validator:
                 return False
             elif char == ")":
                 if validator[-1] != "(":
@@ -23,11 +22,12 @@ def isValid(s):
                     return False
                 else:
                     validator.pop()
-    return True
+        
+    return not validator
 
-#print(isValid("()"))
-#print(isValid("()[]{}"))
-#print(isValid("(]"))
-#print(isValid("([])"))
-#print(isValid("([)]"))
+print(isValid("()"))
+print(isValid("()[]{}"))
+print(isValid("(]"))
+print(isValid("([])"))
+print(isValid("([)]"))
 print(isValid("){"))
